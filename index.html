@@ -9,31 +9,39 @@
         .mainbody{
             font-family: Arial, Helvetica, sans-serif;
             background-image: url("meeting_bg.png");
-            background-position: center;
+            background-position: bottom right;
             background-repeat: no-repeat;
             background-size: cover;
+            min-height: 100vh;
+
         }
         .cards{
             margin: auto;
             width: 1000px;
             background-color: black;
-            box-shadow: 10px 10px gray;
-
+            box-shadow: 0 0 100px black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            overflow: hidden;
         }
         .cclogo{
             margin: auto;
             display: block;
             width: 150px;
             padding: 15px;
-            padding-bottom: 8%;
 
         }
         .profilepic{
             margin: auto;
             display:block;
-            width: 400px;
+            width: auto;
             align-items: start;
-
+        }
+        .profilepic > img {
+            width: 400px;
         }
         p{
             color:white;
@@ -46,14 +54,34 @@
         .information{
             margin: auto;
             display:block;
-            width: 600px;
+            width: auto;
             padding-left: 4%;
             padding-right: 4%;
-        }
+        }                                                                                           
         .flex-container {
             display: flex;
         }       
+        @media screen and (max-width:520px) {
+            .mainbody {
 
+            }
+            .flex-container {
+                display: flex;
+                flex-direction: column;
+            }
+            .cards {
+                width: 85%;
+            }
+            .profilepic > img {
+            width: 100%;
+            }
+            .cclogo{
+                width: 100px;
+            }
+            .information{
+                padding-bottom: 1%;
+            }
+        }
     </style>
 
 </head>
